@@ -1,1 +1,78 @@
-<p>side-nav works!</p>
+<mat-drawer-container class="container-drawer sidenav-position" id="sidenav-log">
+  <mat-drawer #drawerForm mode="over" position="end" [opened]="isOpen" [disableClose]="true" class="sidenav-position">
+    <div class="header-drawer">
+      <div class="container-close" (click)="closeSideNav()">
+        <button>
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
+      <div class="container-title">
+        <span>Log</span>
+      </div>
+    </div>
+    <div class="body-drawer">
+      <div class="box box-default">
+        <form id="filter-fields" [formGroup]="form" (ngSubmit)="submitForm()">
+          <div class="box-body">
+            <mat-form-field class="full-width">
+              <mat-label>Tournament Name</mat-label>
+              <input 
+                matInput 
+                #inputTitle 
+                placeholder="Tournament1" 
+                maxlength="30"
+                formControlName="tournamentTitle">
+              <mat-hint align="end">{{inputTitle.value.length || 0}}/30</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="box-body">
+            <mat-form-field class="full-width">
+              <mat-label>Tournament Size</mat-label>
+              <mat-select formControlName="tournamentSize" (valueChange)="selectBoxChange($event)">
+                <mat-option *ngFor="let option of tournamentSizeOptions" [value]="option.value">
+                  {{option.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="box-body">
+            <mat-form-field class="full-width">
+              <mat-label >Team Name</mat-label>
+              <input matInput #inputTeams 
+                formControlName="team" 
+                placeholder="Team1" 
+                maxlength="20"
+                (keyup.enter)="addTeam(inputTeams.value)" 
+                [readonly]="formValid()"
+                >
+              <mat-hint align="end">{{inputTeams.value.length || 0}}/20</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="alert">
+            <p>{{alert}}</p>
+          </div>
+          <div class="box-body">
+            <button class="add-team-button" (click)="addTeam(inputTeams.value)" type="button">Add Team</button>
+            <p class="amount-teams">Amount of teams: {{teams.length}}</p>
+          </div>
+          <div *ngFor="let team of teams; let i = index" class="file">
+            <div>
+              <label class="label-file">{{team}}</label>
+              <button
+              mat-icon-button 
+              type="button"
+              class="deleteButton"
+              (click)="deleteTeam(i)"
+              >
+              <img src="/assets/icons/close-icon.svg" alt="">
+              </button>
+            </div>
+          </div>
+          <div class="box-body">
+            <button class="full-width save-button" type="submit" [disabled]="!formValid()">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>
