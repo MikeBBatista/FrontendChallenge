@@ -16,13 +16,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { TournamentViewComponent } from './views/tournament-view/tournament-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamMatchComponent,
     TeamCardComponent,
-    SideNavComponent
+    SideNavComponent,
+    TournamentViewComponent
   ],
   imports: [
     BrowserModule,
