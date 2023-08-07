@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class TeamCardComponent {
   @Input() team!: string;
+  @Input() winner!: string;
 }

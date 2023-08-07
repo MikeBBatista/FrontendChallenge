@@ -2,12 +2,12 @@
   <mat-drawer #drawerForm mode="over" position="end" [opened]="isOpen" [disableClose]="true" class="sidenav-position">
     <div class="header-drawer">
       <div class="container-close" (click)="closeSideNav()">
-        <button>
+        <button class="close-side">
           <mat-icon>arrow_forward</mat-icon>
         </button>
       </div>
       <div class="container-title">
-        <span>Log</span>
+        <span>Tournament Configuration</span>
       </div>
     </div>
     <div class="body-drawer">
@@ -52,7 +52,9 @@
             <p>{{alert}}</p>
           </div>
           <div class="box-body">
-            <button class="add-team-button" (click)="addTeam(inputTeams.value)" type="button">Add Team</button>
+            <button class="add-team-button" (click)="addTeam(inputTeams.value)" type="button">
+              <p>Add Team</p>
+            </button>
             <p class="amount-teams">Amount of teams: {{teams.length}}</p>
           </div>
           <div *ngFor="let team of teams; let i = index" class="file">
@@ -69,7 +71,7 @@
             </div>
           </div>
           <div class="box-body">
-            <button class="full-width save-button" type="submit" [disabled]="!formValid()">Save</button>
+            <button class="full-width save-button" type="submit" [disabled]="!formValid()"><p>Save</p></button>
           </div>
         </form>
       </div>

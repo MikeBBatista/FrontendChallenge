@@ -1,12 +1,14 @@
 <app-side-nav [isOpen]="isOpen" (closed)="closeSideNav()" (formValue)="getValuefromSide($event)" ></app-side-nav>
-<mat-toolbar>
+<mat-toolbar class="header">
   <span>{{tournamentTitle}}</span>
   <span class="example-spacer"></span>
-  <button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="openSideNav()">
-    Tournament Config
+  <button class="reset-button" aria-label="Example icon-button with share icon" (click)="createTournament()">
+    <span class="material-symbols-outlined">
+      restart_alt
+    </span>
   </button>
-  <button class="example-icon" aria-label="Example icon-button with share icon" (click)="createTournament()">
-    Reset Tournament
+  <button class="config-button" aria-label="Example icon-button with heart icon" (click)="openSideNav()">
+    <p>Tournament Config</p>
   </button>
 </mat-toolbar>
 <main id="tournament">

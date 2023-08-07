@@ -6,6 +6,6 @@
     <app-team-card class="teamBottom" [team]="element.teams[1]" (click)="winnerOfMatch(element.teams[1], index, element.match)"></app-team-card>
   </li>
   <li *ngIf="element.winner">
-    <app-team-card class="winner" [team]="element.winner"></app-team-card>
+    <app-team-card class="winner" [team]="element.winner" [winner]="element.winner"></app-team-card>
   </li>
 </div>
