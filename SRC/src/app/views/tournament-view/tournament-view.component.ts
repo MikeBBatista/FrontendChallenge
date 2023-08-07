@@ -11,7 +11,7 @@ export class TournamentViewComponent implements AfterViewInit{
   public isOpen: boolean = false;
   public tournamentTitle: string = 'Tournamente Example';
   public numberTeam: number = 8;
-  public teams = ['team1', 'time2', 'time3', 'time4', 'time5', 'time6', 'time7', 'time8'];
+  public teams = ['team1', 'team2', 'team3', 'team4', 'team5', 'team6', 'team7', 'team8'];
   tournament: any[][] = []
 
   ngAfterViewInit() {
