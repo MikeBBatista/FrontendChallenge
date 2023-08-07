@@ -1,0 +1,29 @@
+.match {
+  margin: 24px;
+  display: flex;
+  flex-direction:column;
+  
+
+  .teamBottom ::ng-deep {
+    div {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: #fff;
+    }
+  }
+  
+  .teamTop ::ng-deep {
+    div {
+      background-color: #d9d9d9;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+
+  .winner ::ng-deep {
+    div {
+      background-color: #d9d9d9;
+      border-radius: 8px;
+    }
+  }
+}
