@@ -6,22 +6,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Design and features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![image](https://github.com/MikeBBatista/FrontendChallenge/assets/46934773/07b08af5-b252-4e70-8d47-7695f2c5d345)
 
-## Build
+The initial screen you encounter is an example of a tournament that you can create using this application. You can click on the team's name to make it advance to the next match. If you wish to begin anew, simply employ the reset button, and your tournament will restart.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Clicking the "tournament configuration" button will unveil a side navigation used for crafting your personalized tournament board:
 
-## Running unit tests
+![image](https://github.com/MikeBBatista/FrontendChallenge/assets/46934773/5689ae03-5d07-4a8f-a210-5a314b8ecd0a)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+By filling out the form, you can establish your own tournament with the teams of your choice. You can configure tournaments with a range of 2 to 32 teams.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Please note that you can only create the tournament when the form is valid and the number of teams matches the tournament size.
 
-## Further help
+have fun!
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
