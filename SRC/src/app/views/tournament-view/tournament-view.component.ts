@@ -9,7 +9,7 @@ export class TournamentViewComponent implements AfterViewInit{
 
   public rounds: number[] = [];
   public isOpen: boolean = false;
-  public tournamentTitle: string = 'Tournamente Example';
+  public tournamentTitle: string = 'Tournament Example';
   public numberTeam: number = 8;
   public teams = ['team1', 'team2', 'team3', 'team4', 'team5', 'team6', 'team7', 'team8'];
   tournament: any[][] = []
